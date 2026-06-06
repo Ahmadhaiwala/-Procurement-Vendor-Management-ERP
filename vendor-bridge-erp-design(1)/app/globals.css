@@ -206,19 +206,19 @@
   }
   
   .badge-active {
-    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-opacity-10;
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium;
   }
   .badge-active {
-    @apply bg-[var(--status-active)] bg-opacity-10 text-[var(--status-active)];
+    @apply bg-[var(--status-active)]/10 text-[var(--status-active)];
   }
   .badge-pending {
-    @apply bg-[var(--status-pending)] bg-opacity-10 text-[var(--status-pending)];
+    @apply bg-[var(--status-pending)]/10 text-[var(--status-pending)];
   }
   .badge-blocked {
-    @apply bg-[var(--status-blocked)] bg-opacity-10 text-[var(--status-blocked)];
+    @apply bg-[var(--status-blocked)]/10 text-[var(--status-blocked)];
   }
   .badge-approved {
-    @apply bg-[var(--status-approved)] bg-opacity-10 text-[var(--status-approved)];
+    @apply bg-[var(--status-approved)]/10 text-[var(--status-approved)];
   }
   
   /* Card base styling */

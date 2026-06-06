@@ -98,10 +98,10 @@ export function Sidebar() {
             </div>
             <button
               onClick={logout}
-              className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-red-500 bg-opacity-10 text-red-500 hover:bg-opacity-20 transition-colors text-sm font-medium"
+              className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-red-500/10 text-red-600 dark:text-red-400 hover:bg-red-500/20 transition-colors text-sm font-medium border border-red-200 dark:border-red-800"
             >
               <LogOut size={16} />
-              {isExpanded && 'Logout'}
+              {isExpanded && <span className="font-medium">Logout</span>}
             </button>
           </>
         )}

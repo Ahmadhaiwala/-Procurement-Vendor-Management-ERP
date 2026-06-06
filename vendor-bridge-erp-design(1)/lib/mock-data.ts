@@ -254,14 +254,14 @@ export const mockApprovals: ApprovalWorkflow[] = [
 // Mock Purchase Orders
 export const mockPOs: PurchaseOrder[] = [
   {
-    id: 'po1',
+    id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
     poNumber: 'PO-2026-001',
-    vendorId: 'v4',
+    vendorId: 'b2c3d4e5-f6g7-8901-bcde-f12345678901',
     vendorName: 'Industrial Parts Co.',
     status: 'confirmed',
     items: [
-      { id: 'item1', description: 'CPU Units', quantity: 50, unitPrice: 7800, total: 390000 },
-      { id: 'item2', description: 'RAM Modules', quantity: 100, unitPrice: 4500, total: 450000 },
+      { id: 'c3d4e5f6-g7h8-9012-cdef-123456789012', description: 'CPU Units', quantity: 50, unitPrice: 7800, total: 390000 },
+      { id: 'd4e5f6g7-h8i9-0123-def0-123456789123', description: 'RAM Modules', quantity: 100, unitPrice: 4500, total: 450000 },
     ],
     subtotal: 840000,
     tax: 151200,
@@ -270,13 +270,13 @@ export const mockPOs: PurchaseOrder[] = [
     deliveryDate: '2026-06-15',
   },
   {
-    id: 'po2',
+    id: 'e5f6g7h8-i9j0-1234-efg1-234567890234',
     poNumber: 'PO-2026-002',
-    vendorId: 'v2',
+    vendorId: 'f6g7h8i9-j0k1-2345-fgh2-345678901345',
     vendorName: 'Premium Materials Ltd.',
     status: 'sent',
     items: [
-      { id: 'item4', description: 'Steel Sheets', quantity: 1000, unitPrice: 850, total: 850000 },
+      { id: 'g7h8i9j0-k1l2-3456-ghi3-456789012456', description: 'Steel Sheets', quantity: 1000, unitPrice: 850, total: 850000 },
     ],
     subtotal: 850000,
     tax: 153000,
@@ -289,15 +289,15 @@ export const mockPOs: PurchaseOrder[] = [
 // Mock Invoices
 export const mockInvoices: Invoice[] = [
   {
-    id: 'inv1',
+    id: 'h8i9j0k1-l2m3-4567-hij4-567890123567',
     invoiceNumber: 'INV-2026-001',
     poNumber: 'PO-2026-001',
-    vendorId: 'v4',
+    vendorId: 'b2c3d4e5-f6g7-8901-bcde-f12345678901',
     vendorName: 'Industrial Parts Co.',
     status: 'sent',
     items: [
-      { id: 'item1', description: 'CPU Units', quantity: 50, unitPrice: 7800, total: 390000 },
-      { id: 'item2', description: 'RAM Modules', quantity: 100, unitPrice: 4500, total: 450000 },
+      { id: 'c3d4e5f6-g7h8-9012-cdef-123456789012', description: 'CPU Units', quantity: 50, unitPrice: 7800, total: 390000 },
+      { id: 'd4e5f6g7-h8i9-0123-def0-123456789123', description: 'RAM Modules', quantity: 100, unitPrice: 4500, total: 450000 },
     ],
     subtotal: 840000,
     tax: 151200,

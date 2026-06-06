@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { TrendingUp, Calendar, Download, BarChart3 } from 'lucide-react'
+import { TrendingUp, Calendar, Download, BarChart3, Users, CheckCircle } from 'lucide-react'
 import { mockVendors } from '@/lib/mock-data'
 
 export function Reports() {
@@ -24,13 +24,13 @@ export function Reports() {
       label: 'Total Vendors',
       value: '24',
       change: '+3',
-      icon: 'Users',
+      icon: Users,
     },
     {
       label: 'Pending Approvals',
       value: '5',
       change: '-2',
-      icon: 'CheckCircle',
+      icon: CheckCircle,
     },
   ]
 
