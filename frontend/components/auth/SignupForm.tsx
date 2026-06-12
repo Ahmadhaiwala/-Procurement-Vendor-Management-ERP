@@ -61,8 +61,8 @@ export function SignupForm() {
   return (
     <div className="w-full max-w-md">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-foreground mb-2">Join VendorBridge</h1>
-        <p className="text-muted-foreground">Create your procurement account</p>
+        <h1 className="text-3xl font-bold text-foreground mb-2">Create Your Account</h1>
+        <p className="text-muted-foreground">Join VendorBridge to streamline your procurement</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -208,15 +208,25 @@ export function SignupForm() {
 
         <button
           type="submit"
-          disabled={isLoading || (password.length > 0 && !passwordStrong)}
-          className="w-full py-2.5 px-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+          disabled={isLoading || (password.length > 0 && !passwordStrong) || !name || !email || !orgName}
+          className="w-full py-3 px-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
         >
-          {isLoading ? 'Creating account...' : 'Create Account'}
+          {isLoading ? (
+            <div className="flex items-center justify-center gap-2">
+              <div className="w-4 h-4 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin"></div>
+              Creating account...
+            </div>
+          ) : (
+            'Create Account'
+          )}
         </button>
       </form>
 
-      <p className="text-center text-sm text-muted-foreground mt-6">
-        Already have an account? <a href="/login" className="text-primary font-semibold hover:underline">Sign in</a>
+      <p className="text-center text-sm text-muted-foreground mt-8">
+        Already have an account?{' '}
+        <a href="/login" className="text-primary font-semibold hover:underline transition-colors">
+          Sign in here
+        </a>
       </p>
     </div>
   )

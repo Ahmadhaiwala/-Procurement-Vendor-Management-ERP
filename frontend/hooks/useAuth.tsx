@@ -83,7 +83,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   // Login function
-  const login = async (email: string, password: string, role?: UserRole) => {
+  const login = async (email: string, password: string) => {
     setIsLoading(true);
     try {
       const response = await api.auth.login({
@@ -110,7 +110,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (error instanceof ApiError) {
         throw new Error(error.message);
       }
-      throw new Error('Login failed. Please try again.');
+      throw new Error('Login failed. Please check your email and password.');
     } finally {
       setIsLoading(false);
     }
