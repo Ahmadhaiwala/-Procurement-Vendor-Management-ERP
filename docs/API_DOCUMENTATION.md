@@ -89,4 +89,3 @@ End current session.
   "success": true,
   "message": "Logged out successfully"
 }
-```
